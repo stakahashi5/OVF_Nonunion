@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OVF Prediction</title>
+</head>
+<body>
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+    
+        Age: {{ form.Age.label }} {{ form.Age }}<br>
+        Sex: {{ form.sex.label }} {{ form.sex }}<br>
+        VAS0: {{ form.VAS0.label }} {{ form.VAS0 }}<br>
+        MRIday: {{ form.MRIday.label }} {{ form.MRIday }}<br>
+        KypFle0: {{ form.KypFle0.label }} {{ form.KypFle0 }}<br>
+        Level3: {{ form.Level3.label }} {{ form.Level3 }}<br>
+        T203: {{ form.T203.label }} {{ form.T203 }}<br>
+        Poste02: {{ form.Poste02.label }} {{ form.Poste02 }}<br>
+    
+        <input type="submit" value="Predict">
+    </form>
+
+<div>
+    {{ form.errors }}
+</div>
+{% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+{% endif %}
+
+</body>
+</html>
